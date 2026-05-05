@@ -1,0 +1,19 @@
+{
+  "entertainment_news": [
+    {
+      "title": "Sample News 1",
+      "image_url": "img1.jpg",
+      "author": "Author 1"
+    },
+    {
+      "title": "Sample News 2",
+      "image_url": "img2.jpg",
+      "author": null
+    }
+  ],
+  "cartoon_of_the_day": {
+    "title": "Funny Cartoon",
+    "image_url": "cartoon.jpg",
+    "author": "Cartoonist"
+  }
+}
