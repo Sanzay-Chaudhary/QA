@@ -1,14 +1,10 @@
+from pages.login_page import LoginPage 
+
 def test_valid_login(page):
+    login_page = LoginPage(page)
+    login_page.open_login_page()
+    login_page.login("tomsmith", "SuperSecretPassword!")
 
-    page.goto("https://the-internet.herokuapp.com/login")
+    assert "Secure" in page.url
 
-    page.locator("#username").fill("tomsmith")
-    page.locator("#password").fill("SuperSecretPassword!")
-
-    page.locator("button[type='submit']").click()
-
-    assert "secure" in page.url
-
-    flash_message = page.locator("#flash").inner_text()
-
-    assert "You logged into a secure area!" in flash_message
+    assert "You logged into a secure area!" in login_page.get_flash_message()
