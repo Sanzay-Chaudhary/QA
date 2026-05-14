@@ -1,10 +1,20 @@
-from pages.login_page import LoginPage 
+from pages.login_page import LoginPage
+
 
 def test_valid_login(page):
+
     login_page = LoginPage(page)
+
     login_page.open_login_page()
-    login_page.login("tomsmith", "SuperSecretPassword!")
+
+    login_page.login(
+        "tomsmith",
+        "SuperSecretPassword!"
+    )
 
     assert "secure" in page.url
 
-    assert "You logged into a secure area!" in login_page.get_flash_message()
+    assert (
+        "You logged into a secure area!"
+        in login_page.get_flash_message()
+    )
