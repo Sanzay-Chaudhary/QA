@@ -1,22 +1,11 @@
-from pages.base_page import BasePage
-
-
-class DashboardPage(BasePage):
+class DashboardPage:
 
     def __init__(self, page):
 
-        super().__init__(page)
+        self.page = page
 
-        self.logout_button = (
-            "a[href='/logout']"
-        )
-
-        self.flash_message = "#flash"
+        self.logout_button = page.locator("a.button")
 
     def logout(self):
 
-        self.click(self.logout_button)
-
-    def get_flash_message(self):
-
-        return self.get_text(self.flash_message)
+        self.logout_button.click()
