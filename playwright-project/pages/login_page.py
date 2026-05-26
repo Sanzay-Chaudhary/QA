@@ -3,7 +3,9 @@ class LoginPage:
         self.page = page
         self.username_input = page.locator("#username")
         self.password_input = page.locator("#password")
-        self.login_button = page.locator("#login-button")
+        self.login_button = page.locator("button[type='submit']")
+
+        self.flash_message = page.locator("#flash")
     
     def open_login_page(self):
 
