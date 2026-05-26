@@ -1,31 +1,22 @@
-from pages.base_page import BasePage
-
-
-class LoginPage(BasePage):
-
+class LoginPage:
     def __init__(self, page):
-
-        super().__init__(page)
-
-        self.username_input = "#username"
-        self.password_input = "#password"
-        self.login_button = "button[type='submit']"
-        self.flash_message = "#flash"
-
+        self.page = page
+        self.username_input = page.locator("#username")
+        self.password_input = page.locator("#password")
+        self.login_button = page.locator("#login-button")
+    
     def open_login_page(self):
 
-        self.navigate(
+        self.page.goto(
             "https://the-internet.herokuapp.com/login"
         )
 
+
     def login(self, username, password):
-
-        self.fill(self.username_input, username)
-
-        self.fill(self.password_input, password)
-
-        self.click(self.login_button)
-
+        self.username_input.fill(username)
+        self.password_input.fill(password)
+        self.login_button.click()
+    
     def get_flash_message(self):
 
-        return self.get_text(self.flash_message)
+        return self.flash_message.text_content()
