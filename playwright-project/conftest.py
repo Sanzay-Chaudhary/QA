@@ -29,4 +29,4 @@ def logged_in_page(page):
         "SuperSecretPassword!"
     )
 
-    return page
+    yield page
