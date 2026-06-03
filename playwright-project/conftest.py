@@ -48,3 +48,10 @@ def pytest_runtest_makereport(item, call):
             print(
                 f"Failed URL: {page.url}"
             )
+
+
+
+def pytest_html_report_title(report):
+    report.title = "Playwright Automation Report"
+
+
