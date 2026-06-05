@@ -10,7 +10,8 @@ class LoginPage:
     def open_login_page(self):
 
         self.page.goto(
-            "https://the-internet.herokuapp.com/login"
+            "https://the-internet.herokuapp.com/login",
+            wait_until="domcontentloaded"
         )
 
 
