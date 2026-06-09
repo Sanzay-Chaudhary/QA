@@ -3,10 +3,10 @@ import os
 
 load_dotenv()
 
-USERNAME = os.getenv("USERNAME")
-PASSWORD = os.getenv("PASSWORD")
+QA_USERNAME = os.getenv("QA_USERNAME")
+QA_PASSWORD = os.getenv("QA_PASSWORD")
 BASE_URL = os.getenv("BASE_URL")
 
-print(USERNAME)
-print(PASSWORD)
+print(QA_USERNAME)
+print(QA_PASSWORD)
 print(BASE_URL)
