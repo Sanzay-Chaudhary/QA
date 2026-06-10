@@ -1,0 +1,5 @@
+import random
+
+def generate_random_email():
+    number = random.randint(1000, 9999)
+    return f"test{number}@gmail.com"
