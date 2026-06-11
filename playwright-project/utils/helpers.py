@@ -5,9 +5,6 @@ def generate_random_email():
     return f"test{number}@gmail.com"
 
 
-
-# def print_current_url(page):
-#     print("current url:", page.url)
 def print_current_url(page):
     print(f"Current URL: {page.url}")
 
