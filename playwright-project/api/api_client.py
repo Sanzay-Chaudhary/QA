@@ -7,4 +7,5 @@ class APIClient:
     def post(self, url, payload):
         return requests.post(url, json=payload)
     
-    
+    def validate_status_code(self, response, expected):
+        assert response.status_code == expected
