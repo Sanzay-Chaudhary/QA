@@ -1,6 +1,6 @@
-def test_secure_page(authenticated_page):
+def test_secure_page(logged_in_page):
 
-    authenticated_page.goto(
+    logged_in_page.goto(
         "https://the-internet.herokuapp.com"
     )
 
