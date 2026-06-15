@@ -55,3 +55,13 @@ def pytest_html_report_title(report):
     report.title = "Playwright Automation Report"
 
 
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--env",
+        action="store",
+        default="qa",
+        help="Environment Name"
+    )
+
+
