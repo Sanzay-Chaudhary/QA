@@ -55,7 +55,7 @@ def pytest_html_report_title(report):
     report.title = "Playwright Automation Report"
 
 
-
+# Adding custom command-line option for environment selection
 def pytest_addoption(parser):
     parser.addoption(
         "--env",
