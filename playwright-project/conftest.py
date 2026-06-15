@@ -2,7 +2,7 @@ import pytest
 from playwright.sync_api import sync_playwright
 from pages.login_page import LoginPage
 
-
+# Addding a fixture for Playwright browser and page setup
 @pytest.fixture(scope="function")
 def page():
 
@@ -16,7 +16,7 @@ def page():
 
         browser.close()
 
-
+# Adding a fixture for logging in before tests that require authentication
 @pytest.fixture
 def logged_in_page(page):
 
@@ -31,6 +31,7 @@ def logged_in_page(page):
 
     yield page
 
+# Adding a hook to capture screenshots on test failure
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
 
@@ -50,7 +51,7 @@ def pytest_runtest_makereport(item, call):
             )
 
 
-
+# Adding a hook to customize the HTML report title
 def pytest_html_report_title(report):
     report.title = "Playwright Automation Report"
 
