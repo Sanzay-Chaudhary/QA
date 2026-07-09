@@ -5,6 +5,6 @@ class Database:
         return mysql.connector.connect(
             host="localhost",
             user="root",
-            password="password",
+            password="root123",
             database="playwright_db"
         )
