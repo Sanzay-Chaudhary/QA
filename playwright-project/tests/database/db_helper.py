@@ -6,5 +6,7 @@ class Database:
             host="localhost",
             user="root",
             password="root123",
-            database="playwright_db"
+            database="company",
+            port=3306,
+            use_pure=True   # <-- Important
         )
