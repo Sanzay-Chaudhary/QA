@@ -1,11 +1,11 @@
 from openpyxl import load_workbook
 
 
-def read_excel(file_path, sheet_name):
+def read_excel(file_path, LoginData):
 
     workbook = load_workbook(file_path)
 
-    sheet = workbook[sheet_name]
+    sheet = workbook[LoginData]
 
     data = []
 
