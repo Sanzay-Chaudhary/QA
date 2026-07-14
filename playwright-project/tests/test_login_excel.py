@@ -23,6 +23,7 @@ def test_login_excel(page, username, password):
     login.open_login_page()
 
     login.login(username, password)
+    page.screenshot(path="screenshots/login_success.png")
 
     print(
         f"Testing {username} / {password}"
