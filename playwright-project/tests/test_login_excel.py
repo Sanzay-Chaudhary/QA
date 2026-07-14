@@ -27,4 +27,4 @@ def test_login_excel(page, username, password):
     print(
         f"Testing {username} / {password}"
     )
-    print(test_data)
+    
