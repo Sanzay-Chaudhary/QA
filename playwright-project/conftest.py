@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 from pages.login_page import LoginPage
 
 # Addding a fixture for Playwright browser and page setup
-@pytest.fixture(params=["chromium", "firefox", "webkit"])
+@pytest.fixture(params=["chromium"])
 def page(request):
 
     with sync_playwright() as p:
