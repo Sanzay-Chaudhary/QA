@@ -11,3 +11,7 @@ def test_create_user():
     print(response.status_code)
     print(response.json())
     assert response.status_code == 201
+    
+    data = response.json()
+    assert data["name"] == "Sanzay"
+    assert data["job"] == "QA"
